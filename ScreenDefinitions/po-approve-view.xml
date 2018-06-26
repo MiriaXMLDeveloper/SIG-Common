@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="po-approve-view" template="po-approve-tpl.xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	
+	<labels default="en">
+		<locale name="en">
+			<label name="forward" value="Approve"/>
+		</locale>
+	</labels>
+	
+	<action-overrides>
+		<button name="update" command="update" readonly="true" visible="false" type="submit"/>
+		<button name="release" command="release" readonly="true" visible="false" type="submit"/>
+	</action-overrides>
+		
+	<hidden-overrides>
+		<hidden name="processInformation.response" defaultValue="Complete"/>
+	</hidden-overrides>
+
+	<documentRejection>
+		<rejectionReasons>
+			<reason name="Exception" commentsRequired="false" note="message.returnException">
+			</reason>
+			<reason name="Rescan" commentsRequired="false" note="message.rescan">
+			</reason>
+			<reason name="Vendor Maintenance" commentsRequired="false" note="message.returnVendorMaintenance">
+			</reason>
+			<reason name="Index" commentsRequired="false" note="message.returnIndex">
+			</reason>			
+		</rejectionReasons>
+	</documentRejection>
+
+	<validations>
+		
+	</validations>
+</view>

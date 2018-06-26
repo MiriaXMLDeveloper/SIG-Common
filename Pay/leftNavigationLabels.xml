@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<labels default="en">
+	<locale name="en">
+		<!-- ManagedPay Left navigation -->
+		<!-- Common Labels * * * * * * * * * * * * * * * * * * * * * * * * * * * *  -->
+			<label name="section.mpnavigation" value="Active Pay"/>
+			<label name="number" value="Invoice"/>
+			<label name="action.myinbox" value="My Work Inbox"/>
+		<!-- Common Labels * * * * * * * * * * * * * * * * * * * * * * * * * * * *  -->
+			
+		<!-- AP Queues  * * * * * * * * * * * * * * * * * * * * * * * * * * * *  -->
+			<label name="section.APQueues" value="Invoice Queues"/>
+			<label name="action.upload1" value="Upload Invoice"/>
+			<label name="action.POindexing" value="Invoice Indexing" />
+			<label name="action.POgeneralexception" value="Exception"/>
+			<label name="action.vendormaintenance" value="Vendor Maintenance"/>	
+			<label name="action.rescan" value="Rescan"/>
+			<label name="action.POposting" value="Posting"/>
+			<label name="action.POfinal" value="Final Documentation"/>
+			
+		<!-- DOC Queues  * * * * * * * * * * * * * * * * * * * * * * * * * * * *  -->
+			<label name="section.DocQueues" value="Vendor Doc Queues"/>
+			<label name="action.upload2" value="Upload Vendor Doc"/>
+			<label name="action.docindexing" value="Vendor Doc Indexing" />
+			<label name="action.docrescan" value="Rescan"/>
+			
+		<!--   SEARCH ACTIONS    * * * * * * * * * * * * * * * * * * * * * * * * * * * *  -->
+			<label name="section.search" value="Search"/>
+			<label name="action.advancedinvoicesearch" value="Advanced Invoice Search"/>
+			<label name="action.searchsave" value="Export Search Data"/>
+			<label name="action.preferences" value="User Preferences"/>
+		<!--   SEARCH ACTIONS    * * * * * * * * * * * * * * * * * * * * * * * * * * * *  -->
+		
+		<!--    TOOLS SECTION   * * * * * * * * * * * * * * * * * * * * * * * * * * * *  -->
+			<label name="section.tools" value="Tools"/>
+			<label name="action.reassignDelegate" value="Reassign Delegate's Work"/>
+			<label name="action.reassignSelf" value="Reassign Your Work"/>
+		<!--    TOOLS SECTION   * * * * * * * * * * * * * * * * * * * * * * * * * * * *  -->
+			
+		<!--    APPLICATIONS SECTION  * * * * * * * * * * * * * * * * * * * * * * * * * * * *  -->
+			<label name="section.applications" value="Applications"/>
+			<label name="action.adminmodule" value="ActivePay Admin"/>
+			<label name="action.reporting" value="ActivePay Reporting"/>
+		<!--    APPLICATIONS SECTION  * * * * * * * * * * * * * * * * * * * * * * * * * * * *  -->
+		
+	
+	</locale>
+</labels>
+

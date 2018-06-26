@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<propertyTemplate
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/template.xsd">
+        
+    <labels>
+	<!-- Label overrides for this template -->
+	<locale name="en">
+		<label name="grossAmount" value ="Gross Amount"/>
+		<label name="tbdString3" value ="Name"/>
+		<label name="voucherComments" value="Notes"/>
+	</locale>
+	</labels>
+
+	<section name="doc2" visible="true" collapsible="false" collapsed="false">
+		<properties>
+		<text row="1" col="1" name="type" readonly="true" validation="required" defaultValue="VENDOR-DOC" forceDefault="true"/>
+		</properties>
+		<actions>
+			<button name="forward" command="forward" docType="upload"  readonly="false" type="submit" isAnchored="false"/>
+		</actions>
+	</section>
+	
+	<section name="docDetails" visible="true" collapsible="true" collapsed="false">
+		<properties>
+			<dropDown row="1" col="1" name="tbdString1" choiceList="choice.category" validation="required"/>
+			<dropDown row="1" col="2" name="tbdString2" choiceList="choice.content" validation="required"/>
+			<text row="2" col="1" name="tbdString3" validation="required" />
+			<date row="2" col="2" name="tbdDate1" styleClass="date" validation="required"/>
+			<textArea row="3" col="1-2" name="voucherComments" styleClass="comment"/>
+			</properties>
+	</section>
+	
+	<section name="lineItems" visible="false" collapsible="true" collapsed="false">
+		<lineItemProperties showTotal="true" showTaxTotal="false">
+			<text row="1" col="1" name="quantity" readonly="false" styleClass="thirty"/>
+			<currency row="1" col="2" name="unitPrice" readonly="false" styleClass="currency"/>
+			<dropDown row="2" col="2" name="uom" choiceList="choice.uom" />
+			<currency row="1" col="3" name="lineTotal" readonly="false" validation="required" styleClass="currency"/>
+			<text row="1" col="4" name="itemCode"  readonly="false" styleClass="eighty"/>
+			<text row="1" col="5" name="itemDescription" readonly="false" styleClass="onesixty"/>
+			<lookup row="2" col="4" name="accountCode" lookupType="lookup.accountCode" readonly="false" styleClass="onesixty"/>
+			<lookup row="2" col="5" name="account.description" lookupType="lookup.accountCode" readonly="false" styleClass="onesixty"/>
+		</lineItemProperties>
+		<actions>
+			<button name="addLineItem" command="addLineItem" type="submit" isAnchored="true" allowTabIndex="true" hotKey="a"/>
+			<button name="removeLineItem" command="deleteLineItem" type="submit" isAnchored="true" hotKey="d"/>
+		</actions>
+	</section>
+		
+	<hiddenFields> <!--Are all of these hidden fields required? -->
+		<hidden name="postingERPId" defaultValue="SIG"/>
+		<hidden name="vendorERPId"  defaultValue="SIG"/>
+        <hidden name="newBatchNumber"/>
+        <hidden name="paymentTermERPId"  defaultValue="SIG"/>
+		<hidden name="paymentTypeERPId"  defaultValue="SIG"/>
+        <hidden name="vendor.status" defaultValue="V"/>
+		<hidden name="uploadRef"/>
+		<hidden name="originatorId"/>
+		<hidden name="requesterId"/>
+		<hidden name="originatorName"/>
+		<hidden name="scanSource" defaultValue="Direct Entry" forceDefault="true"/>
+		<hidden name="scanType" defaultValue="VENDOR-DOC" forceDefault="true"/>
+		<hidden name="requester.userName"/>
+		<hidden name="alternatevendor" defaultValue="false" forceDefault="true"/>
+		<hidden name="AFENumber" defaultValue="1" forceDefault="true"/>
+		<hidden name="custom1.tbdComment1" defaultValue="1." forceDefault="true" readonly="true"/>
+		<!--<hidden name="subType" defaultValue="INV" forceDefault="true"/>-->
+     </hiddenFields>
+
+	<processors> <!--Are all of these processors required? -->
+		<processor name="com.miriasystems.processors.NetAmountNoDiscountProcessor"/>
+		<processor name="com.miriasystems.processors.TotalLineAmountProcessor"/>
+		<processor name="com.miriasystems.processors.DueDateProcessor"/>
+		<processor name="com.miriasystems.processors.LineItemUnitPriceCalculator"/>
+    </processors>
+</propertyTemplate>

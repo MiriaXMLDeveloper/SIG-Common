@@ -1,0 +1,830 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<choiceLists xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<!-- Note that the values will normally be numbers, but they are not
+		necessarily numbered -->
+
+	<!-- Note that the values can be Strings -->
+	
+	<!-- GSS Choices-->
+	<list name="choice.business">
+		<choice value="1" label="Home Health"/>
+		<choice value="2" label="Skilled Nursing"/>
+	</list>
+	<list name="choice.gssdoctype">
+		<choice value="1" label="Clinical"/>
+		<choice value="2" label="Financial"/>
+	</list>
+	<list name="choice.gsssubdoc">
+		<choice value="1" label="Admission and Service Agreement"/>
+		<choice value="2" label="Home Health Admission Acknowledgment"/>
+	</list>
+	<list name="choice.gssdoccategory">
+		<choice value="1" label="GSS Category 1"/>
+		<choice value="2" label="GSS Category 2"/>
+	</list>
+		
+	
+	<list name="choice.attachmentTypes">
+		<!-- This choicelist is mandatory for use in the Attachments function. The name of this list must not be changed. -->
+		<!-- Note that option value 0 is reserved -->
+		<!-- Note that option value 15 is internally used for attachments that are based on ad-hoc emails -->
+		<choice value="15" label="Email"/>
+		<!-- Customize options here -->
+		<choice value="1" label="AP Documents"/>
+		<choice value="2" label="AR Documents"/>
+		<choice value="3" label="Journal Documents"/>
+		<!--choice value="1" label="Logo Description"/>
+		<choice value="2" label="Product Information"/>
+		<choice value="3" label="Merchandisemark Waiver"/>
+		<choice value="4" label="Customer Approval - Original"/>
+		<choice value="5" label="Customer Approval - Approved"/>
+		<choice value="6" label="Logo Design"/-->
+	</list>
+	
+	<list name="choice.attachmentLogoTypes">
+		<!-- This choicelist is mandatory for use in the Attachments function. The name of this list must not be changed. -->
+		<!-- Note that option value 0 is reserved -->
+		<!-- Note that option value 15 is internally used for attachments that are based on ad-hoc emails -->
+		<choice value="15" label="Email"/>
+		<!-- Customize options here -->
+		<choice value="2" label="Logo Description"/>
+		<choice value="3" label="Product Information"/>
+		<choice value="4" label="Merchandisemark Waiver"/>
+		<choice value="5" label="Customer Approval - Original"/>
+		<choice value="6" label="Customer Approval - Approved"/>
+		<choice value="7" label="Logo Design"/>
+	</list>
+
+	
+	<list name="choice.currency">
+		<choice value="USD" label="USD"/>
+		<!--<choice value="CDN" label="Canadian Dollar"/>-->
+	</list>
+	
+	<list name="choice.companyCode">
+		<choice value="011" label="011"/>
+		<choice value="030" label="030"/>
+	</list>
+	
+	<list name="choice.expenseCompany">
+	<choice value="001" label="001"/>
+	<choice value="002" label="002"/>
+	<choice value="003" label="003"/>
+	<choice value="004" label="004"/>
+	<choice value="005" label="005"/>
+	<choice value="006" label="006"/>
+	<choice value="007" label="007"/>
+	<choice value="008" label="008"/>
+	<choice value="009" label="009"/>
+	<choice value="011" label="011"/>
+	<choice value="012" label="012"/>
+	<choice value="013" label="013"/>
+	<choice value="014" label="014"/>
+	<choice value="015" label="015"/>
+	<choice value="016" label="016"/>
+	<choice value="017" label="017"/>
+	<choice value="018" label="018"/>
+	<choice value="019" label="019"/>
+	<choice value="021" label="021"/>
+	<choice value="022" label="022"/>
+	<choice value="023" label="023"/>
+	<choice value="024" label="024"/>
+	<choice value="025" label="025"/>
+	<choice value="026" label="026"/>
+	<choice value="027" label="027"/>
+	<choice value="028" label="028"/>
+	<choice value="029" label="029"/>
+	<choice value="030" label="030"/>
+	<choice value="031" label="031"/>
+	<choice value="032" label="032"/>
+	<choice value="033" label="033"/>
+	<choice value="061" label="061"/>
+	<choice value="062" label="062"/>
+	</list>
+
+	<list name="choice.invoiceGroup">
+		<!-- This choicelist is mandatory for use in the advanced search. The name of this list must not be changed. -->
+		<choice value="GRP1" label="Group 1"/>
+		<choice value="GRP2" label="Group 2"/>
+		<choice value="GRP3" label="Group 3"/>
+	</list>
+
+	<list name="choice.invoiceTypes">
+		<!-- This choicelist is mandatory for use in the advanced search. The name of this list must not be changed.
+				Although this choicelist may not be used for the individual view implementation (can be replaced by more specific invoice types that are dependant on group
+				it should always contain the total number of invoice types in the implementation as it will be used for reporting -->
+		<choice value="NON-PO" label="Non-PO"/>
+		<choice value="PO" label="PO"/>
+		<choice value="EDI" label="EDI"/>
+		<choice value="MISC" label="Supporting Documents"/>
+		<choice value="EXP" label="Expense Report"/>
+		<choice value="CASH" label="Cash Advances"/>
+		<choice value="JN" label="Journal Entries"/>
+		<choice value="ADD" label="Change of Address"/>
+		<choice value="MESS" label="Message"/>
+		<choice value="Task" label="Task"/>
+		<choice value="AC" label="Accruals"/>
+		<choice value="KNIGHT" label="KNIGHT"/>
+		<choice value="GSS" label="GSS"/>
+	</list>
+	
+
+	<list name="choice.customtypes">
+		<!-- This choicelist is mandatory for use in the advanced search. The name of this list must not be changed.
+				Although this choicelist may not be used for the individual view implementation (can be replaced by more specific invoice types that are dependant on group
+				it should always contain the total number of invoice types in the implementation as it will be used for reporting -->
+		<choice value="KNIGHT" label="KNIGHT"/>
+		<choice value="GSS" label="GSS"/>
+	</list>
+	
+	<list name="choice.nonpoInvoiceTypes">
+		<choice value="NON-PO" label="Non-PO"/>
+		<!--<choice value="PO" label="PO"/>
+		<choice value="W9" label="W9"/>
+		<choice value="W8" label="W8"/>
+		<choice value="Packing Slip" label="Packing Slip"/>
+		<choice value="Checks" label="Checks"/>
+		<choice value="Purchase Order" label="Purchase Order"/>
+		<choice value="Receiving Document" label="Receiving Document"/>-->
+	</list>
+	
+	<list name="choice.messageSubTypes">
+		<choice value="M1" label="Invoice"/>
+		<choice value="M2" label="Payment"/>
+		<choice value="M3" label="Address"/>
+		<choice value="M4" label="Misc"/>
+	</list>
+	
+	<list name="choice.arTypes">
+		<choice value="AR" label="Accounts Receivable"/>
+	</list>
+	
+	<list name="choice.arSubTypes">
+		<choice value="AR1" label="Merchandise Receivable"/>
+		<choice value="AR2" label="Non-Merchandise Receivable"/>
+	</list>
+	
+	<list name="choice.ediInvoiceTypes">
+		<choice value="EDI" label="EDI"/>
+	</list>
+	
+	<list name="choice.poInvoiceTypes">
+		<choice value="PO" label="PO"/>
+		<choice value="MISC" label="Supporting Documents"/>
+	</list>
+	
+	
+	<list name="choice.voucherInvoiceTypes">
+		<choice value="NON-PO" label="Non-PO Voucher"/>
+		<choice value="PO" label="PO Voucher"/>
+	</list>
+	
+	
+
+	<list name="choice.invoiceSubTypes">
+		<!-- This choicelist is mandatory for use in the advanced search. The name of this list must not be changed.
+				Although this choicelist may not be used for the individual view implementation (can be replaced by more specific invoice types that are dependant on group
+				it should always contain the total number of invoice types in the implementation as it will be used for reporting -->
+		<choice value="INV" label="Invoice"/>
+		<choice value="CM" label="Credit Memo"/>
+		<choice value="REF" label="Customer Refund"/>
+		<choice value="SUP" label="Supporting Docs"/>
+		<choice value="regular" label="Credit Card"/>
+		<choice value="pre-paid" label="Pre-Paid Card"/>
+		<choice value="Reconcile" label="Reconcile"/>
+		<choice value="pre-paid" label="Pre-Paid Card"/>
+	</list>
+
+	<list name="choice.invoiceSubTypes-NONPO">
+		<choice value="INV" label="Invoice"/>
+		<choice value="CM" label="Credit Memo"/>
+		<!--choice value="REF" label="Customer Refund"/-->
+	</list>
+	
+	<list name="choice.invoiceSubTypes-EXCEPT">
+		<choice value="INV" label="Invoice"/>
+		<choice value="CM" label="Credit Memo"/>
+	</list>
+
+	<list name="choice.invoiceSubTypes-MISC">
+		<choice value="SUP" label="Supporting Docs"/>
+		<choice value="ZD" label="Zero Dollar Invoices"/>
+	</list>
+	
+	
+	<list name="choice.invoiceSubTypes-PO">
+		<choice value="INV" label="Invoice"/>
+		<choice value="CM" label="Credit Memo"/>
+	</list>
+	
+	
+	
+	<list name="choice.MerchandiseVoucherSubTypes">
+		<choice value="COR" label="Payment Correction"/>
+		<choice value="WO" label="Write Offs"/>
+	</list>
+	
+	<list name="choice.woVoucherSubTypes">
+		<choice value="WO" label="Write Offs"/>
+		<choice value="COR" label="Payment Correction"/>
+	</list>
+	
+	<list name="choice.expenseVoucherSubTypes">
+		<choice value="INV" label="Invoice"/>
+		<choice value="CM" label="Credit Memo"/>
+		<!--choice value="REF" label="Customer Refund"/-->
+	</list>
+
+	
+	<list name="choice.paymentTerms">
+		<choice value="1" label="Supply Date"/>
+        <choice value="112" label="NET 1 DAY"/>
+        <choice value="114" label="NET 45"/>
+        <choice value="55" label="2%15 NET 45"/>
+        <choice value="15" label="NET 30"/>
+	</list>
+
+	<list name="choice.poCompany">
+		<choice value="011" label="011"/>
+		<choice value="030" label="030"/>
+	</list>
+
+	<list name="choice.priority">
+		<!-- This choicelist is mandatory for use in the advanced search. The name of this list must NOT be changed. -->
+		<choice value="1" label="Misc Invoices"/>
+		<choice value="2" label="Freight and Discount EDI"/>
+		<choice value="3" label="Prepped"/>
+		<choice value="4" label="RTV's"/>
+		<choice value="5" label="Jobber's"/>
+		<choice value="6" label="Rebates"/>
+		<choice value="7" label="Problems"/>
+		<choice value="8" label="LC/OADI"/>
+		<choice value="9" label="EDI No Discount"/>
+		<choice value="10" label="No Terms"/>
+		<choice value="85" label="Wires"/>
+		<choice value="90" label="Zero Dollar"/>
+		<choice value="299" label="Need Deletion"/>
+	</list>
+
+	<list name="choice.sensitivity">
+		<!-- This choicelist is mandatory for use in the advanced search. The name of this list must NOT be changed. -->
+		<choice value="50" label="Restricted"/>
+		<choice value="1" label="Not Restricted"/>
+		<!--<choice value="3" label="Confidential"/>-->
+	</list>
+
+	
+	<list name="choice.provinces">
+		<choice value="AB" label="Alberta"/>
+		<choice value="BC" label="British Columbia"/>
+		<choice value="MB" label="Manitoba"/>
+		<choice value="NB" label="New Brunswick"/>
+		<choice value="NF" label="New Foundland"/>
+		<choice value="NS" label="Nova Scotia"/>
+		<choice value="ON" label="Ontario"/>
+		<choice value="PE" label="Prince Edward Island"/>
+		<choice value="QC" label="Quebec"/>
+		<choice value="SK" label="Saskatchewan"/>
+	</list>
+
+	<list name="choice.states">
+		<choice value="AL" label="Alabama"/>
+		<choice value="AK" label="Alaska"/>
+		<choice value="AB" label="Alberta"/>
+		<choice value="AZ" label="Arizona"/>
+		<choice value="AR" label="Arkansas"/>
+		<choice value="CA" label="California"/>
+		<choice value="CO" label="Colorado"/>
+		<choice value="CT" label="Connecticut"/>
+		<choice value="DE" label="Delaware"/>
+		<choice value="DC" label="District of Columbia"/>
+		<choice value="FL" label="Florida"/>
+		<choice value="." label="Foreign Vendor"/>
+		<choice value="GA" label="Georgia"/>
+		<choice value="HI" label="Hawaii"/>
+		<choice value="ID" label="Idaho"/>
+		<choice value="IL" label="Illinois"/>
+		<choice value="IN" label="Indiana"/>
+		<choice value="IA" label="Iowa"/>
+		<choice value="KS" label="Kansas"/>
+		<choice value="KY" label="Kentucky"/>
+		<choice value="LA" label="Louisiana"/>
+		<choice value="ME" label="Maine"/>
+		<choice value="MD" label="Maryland"/>
+		<choice value="MA" label="Massachusetts"/>
+		<choice value="MI" label="Michigan"/>
+		<choice value="MN" label="Minnesota"/>
+		<choice value="MS" label="Mississippi"/>
+		<choice value="MO" label="Missouri"/>
+		<choice value="MT" label="Montana"/>
+		<choice value="NE" label="Nebraska"/>
+		<choice value="NV" label="Nevada"/>
+		<choice value="NH" label="New Hampshire"/>
+		<choice value="NJ" label="New Jersey"/>
+		<choice value="NM" label="New Mexico"/>
+		<choice value="NY" label="New York"/>
+		<choice value="NC" label="North Carolina"/>
+		<choice value="ND" label="North Dakota"/>
+		<choice value="OH" label="Ohio"/>
+		<choice value="OK" label="Oklahoma"/>
+		<choice value="OR" label="Oregon"/>
+		<choice value="PA" label="Pennsylvania"/>
+		<choice value="RI" label="Rhode Island"/>
+		<choice value="SC" label="South Carolina"/>
+		<choice value="SD" label="South Dakota"/>
+		<choice value="TN" label="Tennessee"/>
+		<choice value="TX" label="Texas"/>
+		<choice value="UT" label="Utah"/>
+		<choice value="VT" label="Vermont"/>
+		<choice value="VA" label="Virginia"/>
+		<choice value="WA" label="Washington"/>
+		<choice value="WV" label="West Virginia"/>
+		<choice value="WI" label="Wisconsin"/>
+		<choice value="WY" label="Wyoming"/>
+	</list>
+
+	<list name="choice.statesAndProvinces">
+		<choice value="AL" label="Alabama"/>
+		<choice value="AK" label="Alaska"/>
+		<choice value="AB" label="Alberta"/>
+		<choice value="AZ" label="Arizona"/>
+		<choice value="AR" label="Arkansas"/>
+		<choice value="BC" label="British Columbia"/>
+		<choice value="CA" label="California"/>
+		<choice value="CO" label="Colorado"/>
+		<choice value="CT" label="Connecticut"/>
+		<choice value="DE" label="Delaware"/>
+		<choice value="DC" label="District of Columbia"/>
+		<choice value="FL" label="Florida"/>
+		<choice value="." label="Foreign Vendor"/>
+		<choice value="GA" label="Georgia"/>
+		<choice value="HI" label="Hawaii"/>
+		<choice value="ID" label="Idaho"/>
+		<choice value="IL" label="Illinois"/>
+		<choice value="IN" label="Indiana"/>
+		<choice value="IA" label="Iowa"/>
+		<choice value="KS" label="Kansas"/>
+		<choice value="KY" label="Kentucky"/>
+		<choice value="KT" label="Kentucky"/>
+		<choice value="LA" label="Louisiana"/>
+		<choice value="ME" label="Maine"/>
+		<choice value="MB" label="Manitoba"/>
+		<choice value="MD" label="Maryland"/>
+		<choice value="MA" label="Massachusetts"/>
+		<choice value="MI" label="Michigan"/>
+		<choice value="MN" label="Minnesota"/>
+		<choice value="MS" label="Mississippi"/>
+		<choice value="MO" label="Missouri"/>
+		<choice value="MT" label="Montana"/>
+		<choice value="NE" label="Nebraska"/>
+		<choice value="NV" label="Nevada"/>
+		<choice value="NB" label="New Brunswick"/>
+		<choice value="NF" label="New Foundland"/>
+		<choice value="NH" label="New Hampshire"/>
+		<choice value="NJ" label="New Jersey"/>
+		<choice value="NM" label="New Mexico"/>
+		<choice value="NY" label="New York"/>
+		<choice value="NC" label="North Carolina"/>
+		<choice value="ND" label="North Dakota"/>
+		<choice value="NS" label="Nova Scotia"/>
+		<choice value="OH" label="Ohio"/>
+		<choice value="OK" label="Oklahoma"/>
+		<choice value="ON" label="Ontario"/>
+		<choice value="OR" label="Oregon"/>
+		<choice value="PA" label="Pennsylvania"/>
+		<choice value="PE" label="Prince Edward Island"/>
+		<choice value="QC" label="Quebec"/>
+		<choice value="RI" label="Rhode Island"/>
+		<choice value="SK" label="Saskatchewan"/>
+		<choice value="SC" label="South Carolina"/>
+		<choice value="SD" label="South Dakota"/>
+		<choice value="TN" label="Tennessee"/>
+		<choice value="TX" label="Texas"/>
+		<choice value="UT" label="Utah"/>
+		<choice value="VT" label="Vermont"/>
+		<choice value="VA" label="Virginia"/>
+		<choice value="WA" label="Washington"/>
+		<choice value="WV" label="West Virginia"/>
+		<choice value="WI" label="Wisconsin"/>
+		<choice value="WY" label="Wyoming"/>
+	</list>
+	
+	<list name="choice.expenseLineTypesSubmitted">
+		<choice value="Cash" label="Cash"/>
+		<choice value="Mileage" label="Mileage"/>
+		<choice value="Credit" label="Credit"/>
+    </list>
+	
+	<list name="choice.comments">
+	<choice value="1" label="Charged Wrong Tax Amount"/>
+	<choice value="2" label="Vendor Charged More Than Negotiated"/>
+	<choice value="3" label="Did Not Receive Goods or Service"/>
+	<choice value="4" label="Invoice Had Previous Paid Balance"/>
+	<choice value="5" label="Multiple Approvals Needed"/>
+	</list>
+	
+	<list name="choice.credit">
+	<choice value="0" label="Credit Reason 1"/>
+	<choice value="1" label="Credit Reason 2"/>
+	</list>
+
+	<list name="choice.paymentType">
+	<choice value="1" label="Check"/>
+	<choice value="2" label="Auto Deposit"/>
+	<choice value="4" label="Wire Transfer"/>
+	<choice value="5" label="CRD Refund Check"/>
+	<choice value="C" label="Comdata"/>
+	</list>
+
+    <list name="choice.expenseLineTypes">
+	<choice value="Cash" label="Cash"/>
+	<choice value="Mileage" label="Mileage"/>
+	<choice value="Credit" label="Credit"/> <!-- Changed by Marty 9/9/2015-->
+    </list>
+
+	<list name="choice.truncated">
+	<choice value="0" label="No"/>
+	<choice value="1" label="Yes"/>
+    </list>
+	
+	<list name="choice.costObjectType">
+	<choice value="GW1" label="Budget Center"/>
+	<choice value="GW2" label="State"/>
+	<choice value="GW3" label="Affil"/>
+	<choice value="GW4" label="Agnt"/>
+	</list>
+	
+	<list name="choice.lineType">
+	<choice value="H" label="Header"/>
+	<choice value="D" label="Detail"/>
+	</list>
+	
+	<list name="choice.freightTerms">
+	<choice value="1" label="Pre-Paid"/>
+	<choice value="3" label="Collect"/>
+	<choice value="5" label="Third Party Collect"/>
+	</list>
+	
+	<!-- Logo Choice Lists -->
+	
+<list name="choice.logoStatus">
+	<!--choice value="00" label="0. Unassigned"/-->
+	<choice value="01" label="1. Assign Specialist"/>
+	<choice value="02" label="2. Assign Customer Information"/>
+	<choice value="03" label="3. Assign Logo Details"/>
+	<choice value="04" label="4. Send to Graphic Artist"/>
+	<choice value="05" label="5. Send Pre-Approval"/>
+	<choice value="06" label="6. More Info Required"/>
+	<choice value="07" label="7. Pre-Approval Hold (10 days)"/>
+	<choice value="08" label="8. Re-send Pre-Approval"/>
+	<choice value="09" label="9. 2nd Pre-Approval Hold (20 days)"/>
+	<choice value="10" label="10. Pre-Approval Approved"/>
+	<choice value="11" label="11. Pre-Approval Rejected"/>
+	<choice value="12" label="12. Create Order"/>
+	<choice value="13" label="13. Send To Clerk"/>
+	<choice value="14" label="14. Send to Digitizer-P"/>
+	<choice value="15" label="15. Waiting on Screens"/>
+	<choice value="16" label="16. Create Sample"/>
+	<choice value="17" label="17. Changes From PDC"/>
+	<choice value="18" label="18. Ship Sample"/>
+	<choice value="19" label="19. Sample Hold (10 days)"/>
+	<choice value="20" label="20. Re-send Sample Approval"/>
+	<choice value="21" label="21. Sample Approval Hold (20 days)"/>
+	<choice value="22" label="22. Sample Changes"/>
+	<choice value="23" label="23. Dead Sales"/>
+	<choice value="24" label="24. Final Hold"/>
+	<choice value="25" label="25. Archived"/>
+</list>
+
+<list name="choice.logoCurrentStatus">
+	<!--choice value="00" label="0. Unassigned"/-->
+	<choice value="01" label="1. Assign Specialist"/>
+	<choice value="02" label="2. Assign Customer Information"/>
+	<!--choice value="03" label="3. Assign Logo Details"/-->
+	<choice value="04" label="4. Sent to Graphic Artist"/>
+	<choice value="05" label="5. Send Pre-Approval"/>
+	<choice value="06" label="6. More Info Required"/>
+	<choice value="07" label="7. Pre-Approval Hold (10 days)"/>
+	<choice value="08" label="8. Re-send Pre-Approval"/>
+	<choice value="09" label="9. 2nd Pre-Approval Hold (20 days)"/>
+	<choice value="10" label="10. Pre-Approval Approved"/>
+	<choice value="11" label="11. Pre-Approval Rejected"/>
+	<choice value="12" label="12. Create Order"/>
+	<choice value="13" label="13. Send To Clerk"/>
+	<choice value="14" label="14. Send to Digitizer-P"/>
+	<choice value="15" label="15. Waiting on Screens"/>
+	<choice value="16" label="16. Create Sample"/>
+	<choice value="17" label="17. Changes From PDC"/>
+	<choice value="18" label="18. Ship Sample"/>
+	<choice value="19" label="19. Sample Hold (10 days)"/>
+	<choice value="20" label="20. Re-send Sample Approval"/>
+	<choice value="21" label="21. Sample Approval Hold (20 days)"/>
+	<choice value="22" label="22. Sample Changes"/>
+	<choice value="23" label="23. Dead Sales"/>
+	<choice value="24" label="24. Final Hold"/>
+	<choice value="25" label="25. Archived"/>
+</list>
+
+<list name="choice.logoStitchCount">
+	<choice value="00" label="A.    0-8000"/>
+	<choice value="01" label="B.  8001-12000"/>
+	<choice value="02" label="C. 12001-16000"/>
+	<choice value="03" label="D. 16001-20000"/>
+	<choice value="04" label="E. 20001-24000"/>
+	<choice value="05" label="F. 24001-28000"/>
+	<choice value="06" label="G. Over 28000"/>
+</list>
+
+
+
+<list name="choice.logoStatus00">
+	<!--choice value="01" label="1. Assign Specialist"/-->
+	<choice value="02" label="2. Assign Customer Details"/>
+	<!--choice value="04" label="4. Send to Graphic Artist"/>
+	<choice value="05" label="5. Send Pre-Approval"/>
+	<choice value="10" label="10. Create Order"/-->
+</list>
+
+<list name="choice.logoStatus01">
+	<choice value="02" label="2. Assign Customer Details"/>
+</list>
+
+<list name="choice.logoStatus02">
+	<!--choice value="03" label="3. Assign Logo Details"/-->
+	<choice value="04" label="4. Send to Graphic Artist"/>
+	<!--choice value="05" label="5. Send Pre-Approval"/>
+	<choice value="10" label="10. Create Order"/-->
+</list>
+
+<list name="choice.logoStatus03">
+	<choice value="04" label="4. Send to Graphic Artist"/>
+	<!--choice value="10" label="10. Create Order"/-->
+</list>
+
+<list name="choice.logoStatus04">  <!--Graphic Artist-->
+	<choice value="05" label="5. Send Pre-Approval"/>
+	<choice value="06" label="6. More Info Required"/>
+	<choice value="12" label="12. Create Order"/>
+</list>
+
+<list name="choice.logoStatus05"> <!--Pre-Approval-->
+		<!--choice value="04" label="4. Send to Graphic Artist"/>
+		<choice value="06" label="6. More Info Required"/-->
+		<choice value="07" label="7. Pre-Approval Hold (10 days)"/>
+</list>
+
+<list name="choice.logoStatus06">  <!--More Info-->
+	<choice value="04" label="4. With Graphic Artist"/>
+</list>
+
+<list name="choice.logoStatus06A">  <!--More Info Approve-->
+	<choice value="10" label="10. Preapproval Approved"/>
+</list>
+
+<list name="choice.logoStatus06R">  <!--More Info Reject-->
+	<choice value="11" label="11. Preapproval Rejected"/>
+</list>
+
+<list name="choice.logoStatus07">
+	<choice value="08" label="8. Re-send Preapproval"/>
+	<choice value="10" label="10. Preapproval Approved"/>
+	<choice value="11" label="11. Preapproval Rejected"/>
+</list>
+
+<list name="choice.logoStatus08">
+		<choice value="09" label="9. 2nd Pre-Approval Hold (20 days)"/>
+</list>
+
+<list name="choice.logoStatus09">
+	<choice value="10" label="10. Preapproval Approved"/>
+	<choice value="11" label="11. Preapproval Rejected"/>
+	<choice value="23" label="23. Dead Sales"/>
+</list>
+
+<list name="choice.logoStatus10">
+	<choice value="06" label=" 6. More Info Required"/>
+	<choice value="12" label="12. Create Order"/>
+</list>
+
+<list name="choice.logoStatus11">
+	<choice value="05" label="5. Send Pre-Approval"/>
+	<choice value="06" label="6. More Info Required"/>
+	<choice value="12" label="12. Create Order"/>
+</list>
+
+<list name="choice.logoStatus12">
+	<choice value="04" label="4. Send to Graphic Artist"/>
+	<choice value="13" label="13. Send To Clerk"/>
+</list>
+
+
+<list name="choice.logoStatus13-1">
+	<choice value="14" label="14. Send to Digitizer-P"/>
+	<choice value="16" label="16. Create Sample"/>
+	<choice value="17" label="17. Graphic Artist Changes from PDC"/>
+</list>
+
+<list name="choice.logoStatus13-2">
+	<choice value="16" label="16. Create Sample"/>
+	<choice value="17" label="17. Graphic Artist Changes from PDC"/>
+</list>
+
+<list name="choice.logoStatus13-3">
+	<choice value="15" label="15. Waiting on Screens"/>
+	<choice value="17" label="17. Graphic Artist Changes from PDC"/>
+</list>
+
+<list name="choice.logoStatus13-4">
+	<choice value="16" label="16. Create Sample"/>
+	<choice value="17" label="17. Graphic Artist Changes from PDC"/>
+</list>
+
+<list name="choice.logoStatus13-5">
+	<choice value="24" label="24. Final Hold"/>
+</list>
+
+<list name="choice.logoStatus14">
+	<choice value="16" label="16. Create Sample"/>
+	<choice value="17" label="17. Graphic Artist Changes from PDC"/>
+</list>
+
+<list name="choice.logoStatus15">
+	<choice value="24" label="24. Final Hold"/>
+</list>
+
+<list name="choice.logoStatus16">
+	<choice value="13" label="13. Return to Digitizer-S"/>
+	<choice value="14" label="14. Return to Digitizer-P"/>
+	<choice value="18" label="18. Ship Sample"/>
+</list>
+
+<list name="choice.logoStatus16-1">
+	<choice value="18" label="18. Ship Sample"/>
+</list>
+
+<list name="choice.logoStatus17">
+	<choice value="13" label="13. Return to Clerk"/>
+	<choice value="14" label="14. Return to Digitizer-P"/>
+</list>
+
+<list name="choice.logoStatus18">
+	<choice value="19" label="19. Sample Hold (10 days)"/>
+</list>
+
+<list name="choice.logoStatus19">
+	<choice value="20" label="20. Re-send Sample Approval"/>
+	<choice value="22" label="22. Sample Changes"/>
+	<choice value="24" label="24. Final Hold"/>
+</list>
+
+<list name="choice.logoStatus20">
+	<choice value="21" label="21. Sample Approval Hold (20 days)"/>
+</list>
+
+<list name="choice.logoStatus21">
+	<choice value="22" label="22. Sample Changes"/>
+	<choice value="23" label="23. Dead Sales"/>
+	<choice value="24" label="24. Final Hold"/>
+</list>
+
+<list name="choice.logoStatus22">
+	<choice value="05" label="5. Send Pre-Approval"/>
+	<choice value="06" label="6. More Info Required"/>
+	<choice value="12" label="12. Create Order"/>
+</list>
+
+<list name="choice.logoStatus23">
+	<choice value="25" label="25. Archive"/>
+</list>
+
+<list name="choice.logoStatus24">
+	<choice value="25" label="25. Archive"/>
+</list>
+
+<list name="choice.logoStatus25">
+	<choice value="01" label="1. Re-start Process"/>
+	<choice value="99" label="99. Close Workflow"/>	
+</list>
+
+
+<list name="choice.holdStatus">
+	<choice value="04" label="4. Pre-Approval Hold (10 days)"/>
+	<choice value="13" label="13. Sample Approval Hold (10 days)"/>
+	<choice value="15" label="15. Sample Approval Hold (20 days)"/>
+	<choice value="17" label="17. Dead Sales"/>
+</list>
+
+<list name="choice.approved">
+	<choice value="0" label="Awaiting Approval"/>
+	<choice value="1" label="Approved"/>
+	<choice value="2" label="Rejected"/>
+</list>
+
+<list name="choice.logoType">
+	<choice value="1" label="EMB"/>
+	<choice value="2" label="ULB"/>
+	<choice value="3" label="SCP"/>
+	<choice value="4" label="ENG"/>
+	<choice value="5" label="COB"/>
+</list>
+
+<list name="choice.logoSLA">
+	<choice value="SE" label="SE"/>
+	<choice value="GE" label="GE"/>
+	<choice value="OE" label="OE"/>
+</list>
+
+<list name="choice.logoRush">
+	<choice value="1" label="Standard"/>
+	<choice value="2" label="Rush"/>
+</list>
+
+<!-- Expense Choice Lists -->
+
+<!--list name="choice.expenseTypes">
+	<choice value="A" label="Mileage"/>
+	<choice value="1" label="Air Fare"/>
+	<choice value="2" label="Hotel"/>
+	<choice value="3" label="Car Rental"/>	
+	<choice value="4" label="Parking"/>
+	<choice value="5" label="Ground Transportation"/>
+	<choice value="6" label="Meals"/>
+	<choice value="7" label="Entertainment"/>
+	<choice value="8" label="Misc (inc baggage, laundry)"/>
+	<choice value="9" label="Department Expense"/>	
+	<choice value="9A" label="Dues and Subscription"/>
+	<choice value="9B" label="Fuel"/>
+	<choice value="9C" label="Equipment Expense"/>	
+	<choice value="9D" label="Software Expense"/>	
+	<choice value="9E" label="Training"/>		
+</list-->
+
+<list name="choice.advanceAmounts">
+	<choice value="100" label="$100"/>
+	<choice value="500" label="$500"/>
+	<choice value="1000" label="$1000"/>
+	<choice value="1500" label="$1500"/>
+	<choice value="2000" label="$2000"/>
+	<choice value="2500" label="$2500"/>
+	<choice value="3000" label="$3000"/>
+	<choice value="3500" label="$3500"/>
+	<choice value="4000" label="$4000"/>
+	<choice value="4500" label="$4500"/>
+	<choice value="5000" label="$5000"/>
+</list>
+
+<list name="choice.department">
+	<choice value="1" label="Marketing"/>
+	<choice value="2" label="Merchandise Merchandise"/>	
+	<choice value="3" label="Custom Merchandise"/>
+	<choice value="4" label="In Store Events"/>
+</list>
+
+<list name="choice.interco">
+	<choice value="1" label="BPLP"/>
+	<choice value="2" label="ABCD"/>	
+	<choice value="3" label="EFGH"/>
+	<choice value="4" label="IJKL"/>
+</list>
+
+<list name="choice.frequency">
+	<choice value="1" label="Ad Hoc"/>
+	<choice value="2" label="Monthly"/>	
+	<choice value="3" label="Quarterly"/>
+	<choice value="4" label="Year-End"/>
+</list>
+
+<list name="choice.subledger">
+	<choice value="1" label="SL001"/>
+	<choice value="2" label="SL002"/>	
+	<choice value="3" label="SL003"/>
+	<choice value="4" label="SL004"/>
+</list>
+
+<list name="choice.portalstatus">
+	<choice value="Processing" label="Processing"/>
+	<choice value="Payment Scheduled" label="Payment Scheduled"/>		
+	<choice value="Available to Pre-Pay" label="Available to Pre-Pay" />  <!-- Added by Marty -->
+	<choice value="Paid" label="Paid"/>
+	<choice value="Archived" label="Archived" />   <!-- Added by Marty -->
+</list>
+
+<list name="choice.accrual">
+	<choice value="REG" label="Regular"/>
+	<choice value="APC" label="Coded Invoices"/>
+	<choice value="APN" label="Uncoded Invoices"/>
+	<choice value="EXP" label="Expense Reports"/>
+	<choice value="Reconcile" label="Reconcile"/>
+	<choice value="Journal" label="Journal"/>
+</list>
+	
+<list name="choice.accrual2">
+	<choice value="APC" label="Coded Invoices"/>
+	<choice value="APN" label="Uncoded Invoices"/>
+	<choice value="EXP" label="Expense Reports"/>
+</list>
+	
+</choiceLists>
+    
+

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<propertyTemplate
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/template.xsd">
+        
+    <labels>
+	<!-- Label overrides for this template -->
+	<locale name="en">
+		<label name="grossAmount" value ="Gross Amount"/>
+		<label name="tbdString3" value ="Freight Terms"/>
+	</locale>
+	</labels>
+
+	<section name="invoice" visible="true" collapsible="false" collapsed="false">
+		<properties>
+		<text row="1" col="1" name="type" readonly="true" validation="required" defaultValue="INVOICE" forceDefault="true"/>
+		<text row="2" col="1" name="number" validation="required"/>
+        <date row="2" col="2" name="date" validation="required" styleClass="date"/>
+		<text row="3" col="1" name="poId"/>
+		<text row="3" col="2" name="buyerId"/>
+		</properties>
+		<actions>
+			<iconAction name="editRouting" icon="/images/ico_routing.gif" width="16" height="16" readOnlyLink="javascript:openViewRoutingWindow('$contextPath$', '$wobNumber$', 'nonPo')" link="javascript:openRoutingWindow('$contextPath$', '$wobNumber$', 'nonPo')" alwaysActive="true" readonly="false"/>			
+			<iconAction name="email" icon="/images/ico_email.gif" width="16" height="16" link="javascript:openSendEmailWindow('$contextPath$', '$imageGUID$', '$wobNumber$')" alwaysActive="true"/>
+			<iconAction name="attachments" icon="/images/ico_docattach.gif" width="16" height="16" link="javascript:openAttachmentsWindow('$contextPath$', '$wobNumber$')" alwaysActive="true"/>
+			<attachmentCountAction name="attachmentCount" visible="true"/>
+			<iconAction name="statusWindow" icon="/images/ico_status.gif" width="16" height="16" link="javascript:openStatusWindow('$seqId$', '$contextPath$');return false;" alwaysActive="true"/>-->
+			<button name="forward" command="forward" readonly="false" docType="upload" type="submit" isAnchored="false"/>
+		</actions>
+	</section>
+	
+	<section name="invoiceDetails" visible="true" collapsible="true" collapsed="false">
+		<properties>
+			<lookup row="1" col="1" name="vendor.name" lookupType="lookup.vendorCode" validation="required" styleClass="fulllookup"/>
+			<lookup row="1" col="2" name="vendorId" lookupType="lookup.vendorCode" validation="required" styleClass="fulllookup"/>
+			<dynamicDropDown row="2" col="1" name="paymentTermId" providerClass="com.miriasystems.ui.providers.PaymentTermChoiceListProvider" onChange="reloadPage(this)" />
+			<date row="2" col="2" readonly="true" name="dueDate" styleClass="date" validation="required"/>
+			<currency row="3" col="1" name="grossAmount" validation="required, decimal" styleClass="currency"/>
+			<textArea row="4" col="1-2" name="voucherComments" styleClass="comment"/>
+			</properties>
+	</section>
+	
+	<section name="vendorDetails" visible="true" collapsible="true" collapsed="false">
+		<properties>
+			<text row="1" col="1-4" name="vendor.address1" readonly="true" styleClass="fulllookup"/>
+			<text row="2" col="1-4" name="vendor.address2" readonly="true" styleClass="fulllookup"/>
+			<text row="3" col="1" name="vendor.city" readonly="true" />
+			<text row="3" col="2" name="vendor.state" readonly="true"/>
+			<text row="3" col="3" name="vendor.postalCode" readonly="true"/>
+	    </properties>
+	</section>
+	
+	<section name="lineItems" visible="true" collapsible="true" collapsed="false">
+		<lineItemProperties showTotal="true" showTaxTotal="false">
+			<text row="1" col="1" name="quantity" readonly="false" styleClass="thirty"/>
+			<currency row="1" col="2" name="unitPrice" readonly="false" styleClass="currency"/>
+			<dropDown row="2" col="2" name="uom" choiceList="choice.uom" />
+			<currency row="1" col="3" name="lineTotal" readonly="false" validation="required" styleClass="currency"/>
+			<text row="1" col="4" name="itemCode"  readonly="false" styleClass="eighty"/>
+			<text row="1" col="5" name="itemDescription" readonly="false" styleClass="onesixty"/>
+			<lookup row="2" col="3" name="companyCode" lookupType="lookup.companyCode" readonly="false" styleClass="fifty" subLinetype="false"/>
+			<lookup row="2" col="4" name="accountCode" lookupType="lookup.accountCode" readonly="false" styleClass="onesixty"/>
+			<lookup row="2" col="5" name="account.description" lookupType="lookup.accountCode" readonly="false" styleClass="onesixty"/>
+		</lineItemProperties>
+		<actions>
+			<button name="addLineItem" command="addLineItem" readonly="false" docType="upload" type="submit" isAnchored="false" hotKey="a"/>
+            <button name="removeLineItem" command="deleteLineItem" readonly="false" docType="upload" type="submit" isAnchored="false" hotKey="d"/>
+		</actions>
+	</section>
+		
+	<hiddenFields> <!--Are all of these hidden fields required? -->
+		<hidden name="postingERPId" defaultValue="SIG"/>
+		<hidden name="vendorERPId"  defaultValue="SIG"/>
+        <hidden name="newBatchNumber"/>
+        <hidden name="paymentTermERPId"  defaultValue="SIG"/>
+		<hidden name="paymentTypeERPId"  defaultValue="SIG"/>
+        <hidden name="vendor.status" defaultValue="V"/>
+		<hidden name="uploadRef"/>
+		<hidden name="originatorId"/>
+		<hidden name="requesterId"/>
+		<hidden name="originatorName"/>
+		<hidden name="scanSource" defaultValue="Direct Entry" forceDefault="true"/>
+		<hidden name="scanType" defaultValue="INVOICE" forceDefault="true"/>
+		<hidden name="requester.userName"/>
+		<hidden name="alternatevendor" defaultValue="false" forceDefault="true"/>
+		<hidden name="AFENumber" defaultValue="1" forceDefault="true"/>
+		<hidden name="custom1.tbdComment1" defaultValue="1." forceDefault="true" readonly="true"/>
+		<hidden name="subType" defaultValue="INV" forceDefault="true"/>
+     </hiddenFields>
+
+	<processors> <!--Are all of these processors required? -->
+		<processor name="com.miriasystems.processors.NetAmountNoDiscountProcessor"/>
+		<processor name="com.miriasystems.processors.TotalLineAmountProcessor"/>
+		<processor name="com.miriasystems.processors.DueDateProcessor"/>
+		<processor name="com.miriasystems.processors.LineItemUnitPriceCalculator"/>
+    </processors>
+</propertyTemplate>

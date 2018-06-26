@@ -1,0 +1,72 @@
+<navigation name="admin.leftnavigation" colapsible="false" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/leftNavigation.xsd">
+    <initpage href="/blank.jsp"></initpage>
+	
+		<section name="section.admin.organization">
+		<action href="/queuestats.do" target="right" image="/images/ico_configuration.gif" name="action.admin.queuestats"/>	
+		<action href="/users.do" target="right" image="/images/ico_database.gif" name="action.admin.users"/>
+		<action href="/organization/list.do" target="right" image="/images/ico_database.gif" name="action.admin.organizations"/>
+		<action href="/costobjects/list.do" target="right" image="/images/ico_database.gif" name="action.admin.costobjects"/>
+		<action href="/groups.do" target="right" image="/images/ico_database.gif" name="action.admin.groups"/>
+		<action href="/creditcategory/list.do" target="right" image="/images/ico_database.gif" name="action.admin.expensecategory"/>
+		<action href="/listpaymentterms.do" target="right" image="/images/ico_database.gif" name="action.admin.paymentterms"/>
+		<action href="/paymenttypes.do" target="right" image="/images/ico_database.gif" name="action.admin.paymenttypes"/>
+		<action href="/approvalexception/list.do" target="right" image="/images/ico_database.gif" name="action.admin.approvalexception"/>	
+	</section>
+	
+	<section name="section.admin.creditcard" collapsed="true">
+		<action href="/creditcards.do" target="right" image="/images/ico_ldap.gif" name="action.admin.creditcard" />
+		<action href="/mcccodes/list.do" target="right" image="/images/ico_database.gif" name="action.admin.mcccodes"/>	
+	</section>
+
+	<!--section name="section.admin.parameters">
+		<action href="/currencyconversion.do" target="right" image="/images/ico_database.gif" name="action.admin.currencyConversion"/>
+		<action href="/defaultvalues.do" target="right" image="/images/ico_systemconfig.gif" name="action.admin.defaults.user"/>
+		<action href="#" target="right" image="/images/ico_systemconfig.gif" name="action.admin.defaults.system"/>
+		<action href="/groups.do" target="right" image="/images/ico_database.gif" name="action.admin.groups"/>
+	</section-->
+
+	<!--section name="section.admin.rules">
+		<action href="/ilog/login.do" target="right" image="/images/ico_ruleseng.gif" name="action.admin.rules"/>
+	</section>-->
+
+
+	<section name="section.admin.vendor" collapsed="true">
+        <!--action href="/vendorportal/preferences.do" target="right" image="/images/ico_database.gif" name="action.admin.preferences"/-->
+		<action href="/vendorportal/listVendors.do" target="right" image="/images/ico_database.gif" name="action.admin.invitevendor"/>
+    </section>
+
+
+	<!--section name="section.admin.erp">
+		<action href="/companies.do" target="right" image="/images/ico_database.gif" name="action.admin.companies"/>
+		<action href="/groups.do" target="right" image="/images/ico_database.gif" name="action.admin.groups"/>
+		<action href="/countries.do" target="right" image="/images/ico_database.gif" name="action.admin.countries"/>
+		<action href="/currencies.do" target="right" image="/images/ico_database.gif" name="action.admin.currencies"/>
+		<action href="/companies.do" target="right" image="/images/ico_database.gif" name="action.admin.companies"/>
+		<action href="/errorcodetranslations.do" target="right" image="/images/ico_database.gif" name="action.admin.errorcodetranslations"/>
+		<action href="/paymentterms.do" target="right" image="/images/ico_database.gif" name="action.admin.paymentterms"/>
+		<action href="/paymenttypes.do" target="right" image="/images/ico_database.gif" name="action.admin.paymenttypes"/>
+		<action href="/taxcodes.do" target="right" image="/images/ico_database.gif" name="action.admin.taxcodes"/>
+		<action href="/costobjects/list.do" target="right" image="/images/ico_database.gif" name="action.admin.costobjects"/>
+	</section-->
+
+
+
+	<section name="section.admin.maintanance" collapsed="true" >
+		<action href="/queuestats.do" target="right" image="/images/ico_configuration.gif" name="action.admin.queuestats"/>
+		<action href="/conductorqueue.do" target="right" image="/images/ico_configuration.gif" name="action.admin.conductor"/>
+		<action href="/users/refresh.do" target="right" image="/images/ico_ldap.gif" name="action.admin.usersrefresh"/>	
+		<!--action href="/deadletterqueue.do" target="right" image="/images/ico_configuration.gif" name="action.admin.dlq"/-->
+		<action href="/logextract/requestlog.do" target="right" image="/images/ico_configuration.gif" name="action.admin.logextract"/>
+	</section>
+
+	<section name="section.admin.renderers" collapsed="true">
+		<action href="/refresh.do" target="right" image="/images/ico_refresh.gif" name="action.admin.refresh"/>
+		<action href="/navigationviewer.do" target="right" image="/images/ico_configuration.gif" name="action.admin.leftnav"/>
+		<action href="/viewviewer.do" target="right" image="/images/ico_configuration.gif" name="action.admin.views"/>
+	</section>
+
+	<section name="section.admin.usersearch">
+		<usersearch />
+	</section>
+
+</navigation>

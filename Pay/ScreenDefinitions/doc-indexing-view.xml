@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="doc-indexing-view" template="doc-indexing-tpl.xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<labels default="en">
+		<locale name="en">
+		<label name="forward" value="Complete"/>
+		</locale>
+	</labels>
+
+	<section-overrides>	
+
+	</section-overrides>
+
+	<property-overrides>
+
+	</property-overrides>
+
+	<lineItem-overrides>
+			 
+	</lineItem-overrides>
+
+	<action-overrides>
+		
+	</action-overrides>
+
+	<hidden-overrides>
+	<hidden name="processInformation.response" defaultValue="Complete"/>	
+	</hidden-overrides>
+
+	 <documentRejection>
+		<rejectionReasons>
+			<reason name="Rescan" commentsRequired="false" note="message.rescan">
+			</reason>
+		</rejectionReasons>
+	</documentRejection>
+
+	<validations>
+	
+	</validations>
+</view>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<choiceLists xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<list name="choice.uom">
+		<choice value="Each" label="Each"/>
+		<choice value="Kilogram" label="Kilogram"/>
+		<choice value="Pounds" label="Pounds"/>
+		<choice value="Liters" label="Liters"/>
+		<choice value="Gallons" label="Gallons"/>
+	</list>
+	
+	<list name="choice.category">
+		<choice value="Expense" label="Expense"/>
+		<choice value="Lease" label="Lease"/>
+		<choice value="Agreement" label="Agreement"/>
+		<choice value="Taxes" label="Taxes"/>
+		<choice value="License" label="License"/>
+		<choice value="Contract" label="Contract"/>
+		<choice value="Insurance" label="Insurance"/>
+		<choice value="Human Resources" label="Human Resources"/>
+	</list>
+
+	<list name="choice.content">
+		<choice value="Meals" label="Meals"/>
+		<choice value="Policy" label="Policy"/>
+		<choice value="Legal" label="Legal"/>
+		<choice value="Marketing Agreement" label="Marketing Agreement"/>
+		<choice value="Distribution Memorandum" label="Distribution Memorandum"/>
+		<choice value="Employee Benefits" label="Employee Benefits"/>
+		<choice value="Authorization to Bind" label="Authorization to Bind"/>
+		<choice value="Audit Results" label="Audit Results"/>
+	</list>
+	
+	<list name="choice.priority">
+	<!-- This choicelist is mandatory for use in the advanced search. The name of this list must NOT be changed. -->
+		<choice value="1" label="Regular"/>
+		<choice value="2" label="Urgent"/>
+	</list>
+	
+	<list name="choice.invoiceTypes">
+	<!-- This choicelist is mandatory for use in the advanced search. The name of this list must NOT be changed. -->
+		<choice value="1" label="NON-PO"/>
+		<choice value="2" label="PO"/>
+	</list>
+
+	<list name="choice.attachmentTypes">
+		<!-- This choicelist is mandatory for use in the Attachments function. The name of this list must not be changed. -->
+		<!-- Note that option value 0 is reserved -->
+		<!-- Note that option value 15 is internally used for attachments that are based on ad-hoc emails -->
+		<choice value="15" label="Email"/>
+		<!-- Customize options here -->
+	</list>
+	
+	<list name="choice.attachmentLogoTypes">
+		<!-- This choicelist is mandatory for use in the Attachments function. The name of this list must not be changed. -->
+		<!-- Note that option value 0 is reserved -->
+		<!-- Note that option value 15 is internally used for attachments that are based on ad-hoc emails -->
+		<choice value="15" label="Email"/>
+		<!-- Customize options here -->
+	</list>
+			
+	<list name="choice.invoiceSubTypes">
+	</list>
+
+	<list name="choice.sensitivity">
+		<!-- This choicelist is mandatory for use in the advanced search. The name of this list must NOT be changed. -->
+	</list>
+	
+</choiceLists>
+    
+

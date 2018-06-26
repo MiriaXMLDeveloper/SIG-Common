@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+The file names listed in here will be search *in order* for a label.  The first file
+in this list must also define the default locale.  Subsequent attempts to redefine the
+default locale will be ignored.
+-->
+
+<apps>
+	<app name="Common" default="true" roles="" />
+	<app name="Pay"  roles="MP_Finance,MP_Administrator2, MP_Scanner2, MP_Processor2, MP_Approver2,MP_Approver3, MP_VendorMaintenance2" />
+    <!--app name="Expense" roles="MP_Administrator1, MP_Administrator2, MP_Administrator3, MP_Administrator4, MP_Expense" />
+    <app name="Ledger" roles="MP_Administrator1, MP_Administrator2, MP_Administrator3, MP_Administrator4, MP_Ledger" />
+    <app name="Energy" roles="MP_Administrator1, MP_Administrator2, MP_Administrator3, MP_Administrator4, MP_Energy, MP_Finance, MP_Ledger" />
+    <app name="Onboarding" roles="MP_Administrator1, MP_Administrator2, MP_Administrator3, MP_Administrator4" />
+    <app name="Training" roles="MP_Administrator1, MP_Administrator2, MP_Administrator3, MP_Administrator4" />
+	<app name="Personnel" roles="MP_Administrator1, MP_Administrator2, MP_Administrator3, MP_Administrator4" />
+	<app name="Feedback"  roles="MP_Finance, MP_Administrator1, MP_Administrator2, MP_Administrator3, MP_Administrator4" /-->
+	<!--app name="Portal" roles="MP_Portal, MP_Administrator1, MP_Administrator2, MP_Administrator3, MP_Administrator4" /-->
+	<app name="Admin" roles="MP_Administrator1, MP_Administrator2, MP_Administrator3, MP_Administrator4" />
+	<app name="Mailroom" roles="MP_Search1"/><!--, MP_Scanner2, MP_Processor2-->
+    <!--app name="Search" roles="MP_Administrator1, MP_Administrator2, MP_Administrator3, MP_Administrator4" /--> 
+
+	
+</apps>

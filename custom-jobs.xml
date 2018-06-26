@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<quartz version="1.1" xmlns="http://www.quartzscheduler.org/ns/quartz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.quartzscheduler.org/ns/quartz http://www.quartzscheduler.org/ns/quartz/job_scheduling_data_1_1.xsd">
+	<job>
+		<job-detail>
+			<name>nonTradeExportJob</name>
+			<group>invoiceOutputGroup</group>
+			<job-class>com.miriasystems.custom.etl.jobs.NonTradeExportJob</job-class>
+			<volatility>false</volatility>
+			<durability>false</durability>
+			<recover>false</recover>
+			<job-data-map allows-transient-data="true">
+                <entry>
+                    <key>outputFolder</key>
+                    <value>C:\\Sigma\\Export</value>
+					<value>\\\\10.212.212.245\\TransactPro\\Input\\</value>
+                </entry>
+				 <entry>
+                    <key>prefix</key>
+                    <value>sigmapharm-posting-output</value>
+                </entry>
+				 <entry>
+                    <key>template</key>
+                    <value>sigmaExport.ftl</value>
+                </entry>
+            </job-data-map>
+		</job-detail>
+		<trigger>
+			<cron>
+				<name>nonTradeExportJob</name>
+				<group>invoiceOutputGroup</group>
+				<job-name>allTrigger</job-name>
+				<job-group>allTriggers</job-group>
+				<cron-expression>0 0/5 * ? * *</cron-expression>
+				
+			</cron>
+		</trigger>
+	</job>
+	
+		<job>
+		<job-detail>
+			<name>PaymentJob</name>
+			<group>invoiceOutputGroup</group>
+			<job-class>com.miriasystems.custom.etl.jobs.NonTradePostingUpdateJob</job-class>
+			<volatility>false</volatility>
+			<durability>false</durability>
+			<recover>false</recover>
+			<job-data-map allows-transient-data="true">
+                <entry>
+                    <key>inputFolder</key>
+                    <value>C:\\Sigma\\Payment\\Input</value>
+                </entry>
+				<entry>
+                    <key>archiveFolder</key>
+                    <value>C:\\Sigma\\Payment\\Archive</value>
+                </entry>
+				 <entry>
+                    <key>fileName</key>
+                    <value>processed-</value>
+                </entry>
+            </job-data-map>
+		</job-detail>
+		<trigger>
+			<cron>
+				<name>paymentJob</name>
+				<group>invoiceOutputGroup</group>
+				<job-name>allTrigger</job-name>
+				<job-group>allTriggers</job-group>
+				<cron-expression>0 0/6 * ? * *</cron-expression>
+				<!--cron-expression>0 1/5 * ? * *</cron-expression-->
+			</cron>
+		</trigger>
+	</job>
+	
+</quartz>

@@ -1,0 +1,43 @@
+<navigation name="section.mpnavigation" colapsible="false" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+    <initpage href="/filenet/search.do?searchName=InboxSearchPay&amp;getNext=true"/>
+    <action href="/filenet/search.do?searchName=InboxSearchPay&amp;getNext=true" target="right" image="/images/ico-inbox.png" name="action.myinbox" searchName="InboxSearchPay"/>
+	
+	<!--   AP Queues Section         -->
+	<section name="section.APQueues" roles="MP_Scanner2, MP_Processor2, MP_Approver2, MP_VendorMaintenance2, MP_Administrator2" collapsed="false" >
+        <action href="/filenet/upload.do?view=upload-po-view.xml" target="right" image="/images/ico_add_doc.png" roles="MP_Scanner2, MP_Processor2, MP_Approver2, MP_Administrator2" name="action.upload1" />
+		<action href="/filenet/search.do?searchName=POIndexingSearch" target="right" image="/images/ico_queue.gif" name="action.POindexing" roles="MP_Processor2, MP_Approver2, MP_Administrator2" searchName="POIndexingSearch"/>
+        <action href="/filenet/search.do?searchName=POExceptionSearch" target="right" image="/images/ico_queue.gif" name="action.POgeneralexception" roles="MP_Approver2, MP_Administrator2" searchName="POExceptionSearch"/>
+		<action href="/filenet/search.do?searchName=VendorMaintenanceSearch" target="right" image="/images/ico_queue.gif" name="action.vendormaintenance" roles="MP_Approver2, MP_VendorMaintenance2, MP_Administrator2" searchName="VendorMaintenanceSearch"/>
+		<action href="/filenet/search.do?searchName=RescanSearch" target="right" image="/images/ico_queue.gif" name="action.rescan" roles="MP_Scanner2, MP_Processor2, MP_Approver2, MP_Administrator2"  searchName="RescanSearch"/>
+		<action href="/filenet/search.do?searchName=POPostingSearch" target="right" image="/images/ico_queue.gif" name="action.POposting" roles="MP_Processor2, MP_Approver2, MP_Administrator2" searchName="POPostingSearch"/>
+		<action href="/filenet/search.do?searchName=POFinalSearch" target="right" image="/images/ico_queue.gif" name="action.POfinal" roles="MP_Processor2, MP_Approver2, MP_Administrator2" searchName="POFinalSearch"/>
+	</section>  
+
+	<!--   Vendor Doc Queues Section         -->
+	<section name="section.DocQueues" roles="MP_Scanner2, MP_Processor2, MP_Approver2, MP_Administrator2" collapsed="false" >
+		<action href="/filenet/upload.do?view=upload-doc-view.xml" target="right" image="/images/ico_add_doc.png" name="action.upload2" roles="MP_Scanner2, MP_Processor2, MP_Approver2, MP_Administrator2"/>
+		<action href="/filenet/search.do?searchName=DocIndexingSearch" target="right" image="/images/ico_queue.gif" name="action.docindexing" roles="MP_Scanner2, MP_Processor2, MP_Approver2, MP_Administrator2"  searchName="DocIndexingSearch"/>
+		<action href="/filenet/search.do?searchName=DocRescanSearch" target="right" image="/images/ico_queue.gif" name="action.docrescan" roles="MP_Scanner2, MP_Processor2, MP_Approver2, MP_Administrator2"  searchName="DocRescanSearch"/>
+	</section>  
+	
+	<!--   Search Actions        -->
+    <section name="section.search" collapsed="false" roles="MP_Scanner2, MP_Processor2, MP_Approver2, MP_Approver3, MP_VendorMaintenance2, MP_Administrator2" >
+		<documentsearch target="right" showPoSearch="true" showVendorSearch="true"/>
+        <action href="/document/advancedsearch.do?showPoProperties=true" target="right" image="/images/ico_search.gif" name="action.advancedinvoicesearch"/>
+        <action href="/document/headerInvoiceSearch.do?showPoProperties=true" target="right" image="/images/ico_search.gif" name="action.searchsave"/>
+    </section>
+
+	<!--   Tools        -->
+    <section name="section.tools" collapsed="false" roles="MP_Scanner2, MP_Processor2, MP_Approver2, MP_Approver3, MP_VendorMaintenance2, MP_Administrator2" >
+        <action href="/documents/reassign.do?userIsSelf=true" target="right" image="/images/ico_reassign.gif" name="action.reassignSelf"/>
+        <action href="/documents/reassign.do?userIsSelf=false" target="right" image="/images/ico_reassign.gif" name="action.reassignDelegate"/>
+        <action href="/protected/preferences.do" target="right" image="/images/ico_configuration.gif" name="action.preferences"/>
+    </section>
+         
+	<!--   Applications         -->
+    <section name="section.applications" collapsed="True" roles="MP_Administrator2">
+		<!--action href="" target="_blank" image="/images/ico_report.gif" name="action.reporting" roles="MPSys_Test,MP_Administrator1, MP_Processor4,MP_Administrator2"  contextPath="/ManagedPay/reporting/index.jsp"/-->
+        <action href="" target="_blank" image="/images/ico_configuration.gif" name="action.adminmodule" roles="MP_Administrator2" contextPath="/ManagedPay/admin/index.jsp"/>
+    </section>
+		
+</navigation>

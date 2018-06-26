@@ -1,0 +1,96 @@
+																<notEqual name="subType" value ="Warehouse"/>
+																<notEqual name="tbdString3" value="Albany - MAX"/>
+																<notEqual name="tbdString3" value="Alexandria - MAX"/>
+																<notEqual name="tbdString3" value="Ankeny - MAX"/>
+																<notEqual name="tbdString3" value="Atlanta - MAX"/>
+																<notEqual name="tbdString3" value="Billings - MAX"/> 
+																<notEqual name="tbdString3" value="Birmingham - MAX"/>
+																<notEqual name="tbdString3" value="Boise - MAX"/>
+																<notEqual name="tbdString3" value="Buffalo - MAX"/>
+																<notEqual name="tbdString3" value="Charlotte - MAX"/>
+																<notEqual name="tbdString3" value="Chicago - MAX"/>
+																<notEqual name="tbdString3" value="Cincinnati - MAX"/>
+																<notEqual name="tbdString3" value="Cleveland - MAX"/>
+																<notEqual name="tbdString3" value="Columbia SC - MAX"/>
+																<notEqual name="tbdString3" value="Columbia MO - MAX"/>
+																<notEqual name="tbdString3" value="Dallas - MAX"/>
+																<notEqual name="tbdString3" value="Denver - MAX"/>
+																<notEqual name="tbdString3" value="Downey - MAX"/>
+																<notEqual name="tbdString3" value="El Paso - MAX"/>
+																<notEqual name="tbdString3" value="Erie - MAX"/>
+																<notEqual name="tbdString3" value="Fairfield - MAX"/>
+																<notEqual name="tbdString3" value="Fresno - MAX"/>
+																<notEqual name="tbdString3" value="Grand Rapids - MAX"/>
+																<notEqual name="tbdString3" value="Greensboro - MAX"/>
+																<notEqual name="tbdString3" value="Hanover - MAX"/>
+																<notEqual name="tbdString3" value="Harrisburg - MAX"/>
+																<notEqual name="tbdString3" value="Hawaii - MAX"/>
+																<notEqual name="tbdString3" value="NorCal Converting - MAX"/>
+																<notEqual name="tbdString3" value="Houston - MAX"/>
+																<notEqual name="tbdString3" value="Indianapolis - MAX"/>
+																<notEqual name="tbdString3" value="Joplin - MAX"/>
+																<notEqual name="tbdString3" value="Knoxville - MAX"/>
+																<notEqual name="tbdString3" value="La Mirada - MAX"/>
+																<notEqual name="tbdString3" value="Lakeland - MAX"/>
+																<notEqual name="tbdString3" value="Las Vegas - MAX"/>
+																<notEqual name="tbdString3" value="Little Rock - MAX"/>
+																<notEqual name="tbdString3" value="Livonia - MAX"/>
+																<notEqual name="tbdString3" value="Louisville - MAX"/>
+																<notEqual name="tbdString3" value="Lynchburg - MAX"/>
+																<notEqual name="tbdString3" value="Memphis - MAX"/>
+																<notEqual name="tbdString3" value="Metro NY - MAX"/>
+																<notEqual name="tbdString3" value="Miami - MAX"/>
+																<notEqual name="tbdString3" value="Minneapolis - MAX"/>
+																<notEqual name="tbdString3" value="Nashville - MAX"/>
+																<notEqual name="tbdString3" value="National Accounts - MAX"/>
+																<notEqual name="tbdString3" value="Nebraska - MAX"/>
+																<notEqual name="tbdString3" value="Northeast Converting Warehouse - MAX"/>
+																<notEqual name="tbdString3" value="Oklahoma City - MAX"/>
+																<notEqual name="tbdString3" value="Olathe - MAX"/>
+																<notEqual name="tbdString3" value="Phoenix - MAX"/>
+																<notEqual name="tbdString3" value="Pittsburgh - MAX"/>
+																<notEqual name="tbdString3" value="Port Huron - MAX"/>
+																<notEqual name="tbdString3" value="Portland OR - MAX"/>
+																<notEqual name="tbdString3" value="Portland ME - MAX"/>
+																<notEqual name="tbdString3" value="Raleigh - MAX"/>
+																<notEqual name="tbdString3" value="Reno - MAX"/>
+																<notEqual name="tbdString3" value="Richmond - MAX"/>
+																<notEqual name="tbdString3" value="Roanoke - MAX"/>
+																<notEqual name="tbdString3" value="Rochester - MAX"/>
+																<notEqual name="tbdString3" value="Salt Lake City - MAX"/>
+																<notEqual name="tbdString3" value="Seattle - MAX"/>
+																<notEqual name="tbdString3" value="Shreveport - MAX"/>
+																<notEqual name="tbdString3" value="Springfield - MAX"/>
+																<notEqual name="tbdString3" value="St Louis - MAX"/>
+																<notEqual name="tbdString3" value="Syracuse - MAX"/>
+																<notEqual name="tbdString3" value="Tallahassee - MAX"/>
+																<notEqual name="tbdString3" value="West Haven - MAX"/>
+																<notEqual name="tbdString3" value="Westamption - MAX"/>
+																<notEqual name="tbdString3" value="Wichita - MAX"/>
+																<notEqual name="tbdString3" value="Wilmington - MAX"/>
+																<notEqual name="tbdString3" value="Wisconsin - MAX"/>
+																<notEqual name="tbdString3" value="Yakima - MAX"/>
+																<notEqual name="tbdString3" value="Baltimore MDC - MAX"/>
+																<notEqual name="tbdString3" value="Bloomington MDC - MAX"/>
+																<notEqual name="tbdString3" value="Buffalo Grove MDC - MAX"/>
+																<notEqual name="tbdString3" value="Cleveland MDC - MAX"/>
+																<notEqual name="tbdString3" value="Denver MDC - MAX"/>
+																<notEqual name="tbdString3" value="Fairfax MDC - MAX"/>
+																<notEqual name="tbdString3" value="Flint MDC - MAX"/>
+																<notEqual name="tbdString3" value="Kansas City MDC - MAX"/>
+																<notEqual name="tbdString3" value="Livonia MDC - MAX"/>
+																<notEqual name="tbdString3" value="Philadelphia MDC - MAX"/>
+																<notEqual name="tbdString3" value="Salt Lake City MDC - MAX"/>
+																<notEqual name="tbdString3" value="St Louis MDC - MAX"/>
+																<notEqual name="tbdString3" value="Troy MDC - MAX"/>
+																<notEqual name="tbdString3" value="Willow Grove MDC - MAX"/>
+																<notEqual name="tbdString3" value="FedEx Atlanta - MAX"/>
+																<notEqual name="tbdString3" value="FedEx Chicago - MAX"/>
+																<notEqual name="tbdString3" value="FedEx Dallas - MAX"/>
+																<notEqual name="tbdString3" value="FedEx Nor Cal - MAX"/>
+																<notEqual name="tbdString3" value="FedEx Downey - MAX"/>
+																<notEqual name="tbdString3" value="FedEx Memphis - MAX"/>
+																<notEqual name="tbdString3" value="FedEx Clifton - MAX"/>
+																<notEqual name="tbdString3" value="NA Imports - MAX"/>
+																<notEqual name="tbdString3" value="Loveland Parts - MAX"/>
+																<notEqual name="tbdString3" value="Fidelity - MAX"/>

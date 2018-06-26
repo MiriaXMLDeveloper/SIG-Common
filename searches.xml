@@ -1,0 +1,219 @@
+<searches xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/searches.xsd">
+
+
+                <search name="InboxSearchPay" queueName="Inbox" resultsPage="/ManagedPay/filenet/apdocument.do" frameRatio="60" titleKey="action.myinbox">
+                                <criteria>
+                                                <and>
+                                                    <alwaysTrue name="" value=""/>
+                                                </and>
+                                </criteria>
+                                <ordering>                                         
+                                                <order name="dueDate" direction="ASC"/>
+                                                <order name="seqId" direction="ASC"/>
+                                </ordering>
+                                <visibleProperties>
+                                                <property name="vendor.name"/>
+                                                <property name="poId"/>
+												<property name="number"/>
+												<property name="date" type="date" filter="date"/>
+												<property name="dueDate" type="Date" filter="date"/>
+												<property name="seqId"/>
+												<property name="scanDate" filter="date" type="Date"/>
+												<property name="failReason" filter="like"/>
+								</visibleProperties>
+                </search>
+				
+                <search name="POIndexingSearch" queueName="POIndexing" resultsPage="/ManagedPay/filenet/apdocument.do" frameRatio="60" titleKey="action.POindexing">
+                                <criteria>
+                                                <and>
+                                                                <alwaysTrue name="" value=""/>
+                                                </and>
+                                </criteria>
+                                <ordering>
+                                                <order name="scanDate" direction="ASC"/>
+                                </ordering>
+                                <visibleProperties>
+												<property name="vendor.name"/>
+                                                <property name="poId"/>
+												<property name="number"/>
+												<property name="date" type="date" filter="date"/>
+												<property name="dueDate" type="Date" filter="date"/>
+												<property name="grossAmount" type="currency"/>
+                                </visibleProperties>
+                </search>    
+     			
+			 
+				<search name="POExceptionSearch" queueName="GeneralException" resultsPage="/ManagedPay/filenet/apdocument.do" frameRatio="60" titleKey="action.POgeneralexception">
+                                <criteria>
+                                                <and>
+                                                                <alwaysTrue name="" value=""/>
+                                                </and>
+                                </criteria>
+                                <ordering>
+                                                <order name="dueDate" direction="ASC"/>
+												<order name="rejectionReason" direction="ASC"/> 
+                                                <order name="seqId" direction="ASC"/>
+                                </ordering>
+                                <visibleProperties>
+												<property name="vendor.name"/>
+                                                <property name="poId"/>
+												<property name="number"/>
+												<property name="date" type="date" filter="date"/>
+												<property name="dueDate" type="Date" filter="date"/>
+								                <property name="failReason" filter="like"/>
+                                </visibleProperties>
+                </search>
+						
+						
+				<search name="VendorMaintenanceSearch" queueName="VendorMaintenance" resultsPage="/ManagedPay/filenet/apdocument.do" frameRatio="60" titleKey="action.vendormaintenance">
+                                <criteria>
+                                                <and>
+                                                                <alwaysTrue name="" value=""/>
+                                               </and>
+                                </criteria>
+                                <ordering>
+                                                <order name="rejectionReason" direction="ASC"/>                                     
+                                                <order name="dueDate" direction="ASC"/>
+                                                <order name="seqId" direction="ASC"/>
+                                </ordering>
+                                <visibleProperties>                                         
+                                                <property name="vendor.name"/>
+                                                <property name="poId"/>
+												<property name="number"/>
+												<property name="date" type="date" filter="date"/>
+												<property name="dueDate" type="Date" filter="date"/>
+								                <property name="rejectionReason" filter="like"/>
+                                </visibleProperties>
+                </search>
+				
+				<search name="RescanSearch" queueName="Rescan" resultsPage="/ManagedPay/filenet/apdocument.do" frameRatio="60" titleKey="action.rescan">
+                                <criteria>
+                                                <and>
+																<equals name="type" value="INVOICE"/>
+                                               </and>
+                                </criteria>
+                                <ordering>
+                                                
+                                                <order name="scanDate" direction="ASC"/>
+                                                <order name="seqId" direction="ASC"/>
+                                </ordering>
+                                <visibleProperties>                                         
+                                                <property name="vendor.name"/>
+                                                <property name="poId"/>
+												<property name="number"/>
+												<property name="date" type="date" filter="date"/>
+												<property name="dueDate" type="Date" filter="date"/>
+												
+                                </visibleProperties>
+                </search>
+							
+                <search name="POPostingSearch" queueName="Posting" resultsPage="/ManagedPay/filenet/apdocument.do" frameRatio="60" titleKey="action.POposting">
+                                <criteria>
+                                                <and>
+													<alwaysTrue name="" value=""/>
+                                                </and>
+                                </criteria>
+                                <ordering>
+                                                
+                                                <order name="dueDate" direction="ASC"/>
+                                                <order name="seqId" direction="ASC"/>
+                                </ordering>
+                                <visibleProperties>
+                                                <property name="vendor.name"/>
+                                                <property name="poId"/>
+												<property name="number"/>
+												<property name="date" type="date" filter="date"/>
+												<property name="dueDate" type="Date" filter="date"/>                                                                                    
+                                </visibleProperties>
+                </search>
+				
+				<search name="POFinalSearch" queueName="POFinal" resultsPage="/ManagedPay/filenet/apdocument.do" frameRatio="60" titleKey="action.POfinal">
+                                <criteria>
+                                                <and>
+													<alwaysTrue name="" value=""/>
+                                                </and>
+                                </criteria>
+                                <ordering>
+                                                
+                                                <order name="dueDate" direction="ASC"/>
+                                                <order name="seqId" direction="ASC"/>
+                                </ordering>
+                                <visibleProperties>
+												<property name="vendor.name"/>
+                                                <property name="poId"/>
+												<property name="number"/>
+												<property name="date" type="date" filter="date"/>
+												<property name="dueDate" type="Date" filter="date"/>                                                                                       
+                                </visibleProperties>
+                </search>
+				
+				<search name="DocIndexingSearch" queueName="DOCIndexing" resultsPage="/ManagedPay/filenet/apdocument.do" frameRatio="60" titleKey="action.docindexing">
+                                <criteria>
+                                                <and>
+                                                                <alwaysTrue name="" value=""/>
+                                                </and>
+                                </criteria>
+                                <ordering>
+                                                <order name="scanDate" direction="ASC"/>
+                                </ordering>
+                                <visibleProperties>
+												<property name="seqId"/>
+												<property name="scanDate" type="date" filter="date"/>
+												<property name="voucherComments"/>
+                                </visibleProperties>
+                </search>
+				
+
+				
+				
+				
+				
+				
+				
+				<search name="DocRescanSearch" queueName="Rescan" resultsPage="/ManagedPay/filenet/apdocument.do" frameRatio="60" titleKey="action.docrescan">
+                                <criteria>
+                                                <and>
+																<equals name="type" value="VENDOR-DOC"/>
+                                               </and>
+                                </criteria>
+                                <ordering>
+                                                
+                                                <order name="scanDate" direction="ASC"/>
+                                                <order name="seqId" direction="ASC"/>
+                                </ordering>
+                                <visibleProperties>                                         
+                                                <property name="seqId"/>
+												<property name="scanDate" type="date" filter="date"/>
+												<property name="voucherComments"/>
+												
+                                </visibleProperties>
+                </search>
+								
+				
+<!-- DO NOT REMOVE THE ReassignSearch. This search is used by the reassign functionality. You may make modifications to the columns and settings. -->
+                <search name="ReassignSearch" queueName="Inbox" resultsPage="/ManagedPay/filenet/apdocument.do" frameRatio="60" titleKey="action.myinbox">
+                                <criteria>
+                                                <and>
+                                                                <alwaysTrue name="" value=""/>
+                                                </and>
+                                </criteria>
+                                <ordering>                                         
+                                                <order name="processInformation.deadline" direction="ASC"/>
+                                                <order name="dueDate" direction="ASC"/>
+                                                <order name="seqId" direction="ASC"/>
+                                </ordering>
+                                <visibleProperties>                                         
+                                                <property name="date" type="Date" filter="date"/>
+                                                <property name="number" filter="like"/>
+                                                <property name="poId"/>
+                                                <property name="vendor.name" filter="like"/>
+                                                <property name="dueDate" type="date" filter="date"/>
+                                                <!--property name="processInformation.deadline" type="Date" filter="date"/-->
+                                                <property name="type"/>
+                                                <property name="processInformation.queueName" />
+                                </visibleProperties>
+                </search>
+								
+	
+				
+</searches>

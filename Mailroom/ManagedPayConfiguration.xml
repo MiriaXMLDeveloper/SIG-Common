@@ -1,0 +1,62 @@
+<managedpay baseCurrency="USD" siteRole="VRT_MPSys_Test" isolatedRegion="2"
+            apManager="dramakrishnan"
+            itManager="managedpay@hotmail.com"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/managedpayconfiguration.xsd">
+    <typeInformation>
+        <negativeCurrencyTypes>
+            <invoiceType>NPCREDIT</invoiceType>
+        </negativeCurrencyTypes>
+    </typeInformation>
+    <fileNet>
+        <processEngine routerUrl="QSL_CP2" username="Administrator" password="admin" prefix="QSL_OS2.dbo"/>
+		<contentEngine url="iiop://localhost:2809/FileNet/Engine" wsiUrl="http://localhost:9080/wsi/FNCEWS40MTOM/" objectStore="ActivePay2" username="administrator" password="admin" domain="QSL_AP" workplaceUrl="http://qsl52:9082/navigator/bookmark.jsp?desktop=AP2&amp;repositoryId=ActivePay2" defaultUploadFile="DummyFile.txt"/>
+    </fileNet>
+ <userLookup providerUrl="ldap://miriadevad:389" lookupUsername="Administrator" lookupPassword="admin" lookupContainer="CN=Users" log="true">
+	 <namingSchema baseDn="DC=development,DC=local">
+		  <userContainer name="CN=Users" /> 
+		  <roleContainer name="OU=ManagedPay" /> 
+		 <attributes>
+		  <mapping attributeName="userPrincipalName" propertyName="fullUserName" /> 
+		  <mapping attributeName="givenName" propertyName="firstName" /> 
+		  <mapping attributeName="sn" propertyName="lastName" /> 
+		  <mapping attributeName="displayName" propertyName="displayName" /> 
+		  <mapping attributeName="distinguishedName" propertyName="distinguishedName" /> 
+		  <mapping attributeName="description" propertyName="description" /> 
+		  <mapping attributeName="telephoneNumber" propertyName="phone" /> 
+		  <mapping attributeName="mail" propertyName="email" /> 
+		  <mapping attributeName="sAMAccountName" propertyName="userName" />
+		  <mapping attributeName="manager" propertyName="tbdString4"/>  		  		  
+		  <mapping attributeName="employeeID" propertyName="employeeNumber"/>
+		  </attributes>
+	  </namingSchema>
+  </userLookup>
+  <mailSettings
+		host="10.212.212.46"
+			protocol="smtp"
+			user="mpay"
+			password="mpay"
+			userEmail="mpay@mpay.com"
+	/>
+
+	<outboundMailSettings
+	    		host="10.212.212.46"
+			protocol="smtp"
+			user="mpay"
+			password="mpay"
+			userEmail="mpay@mpay.com"
+	/>
+
+    <serverSpecifics dialect="com.miriasystems.database.SQLServer2012Dialect"
+		transactionManagerClass="org.hibernate.transaction.WebSphereTransactionManagerLookup"
+       jndiInitialContextFactory="com.ibm.websphere.naming.WsnInitialContextFactory"
+       jndiURL="iiop://localhost:2811/"          
+        baseURL="http://qsl52:9082/ManagedPay"
+        logDirectory="C:\MiriaSystems\Vertiv\ManagedPay\Logs"
+        workflowLogDirectory="C:\MiriaSystems\Vertiv\ManagedPay\Logs"
+            additionalJndiProperties="com.ibm.websphere.naming.jndicache.cacheobject=none,name=value"
+        />
+
+    <paging maxResults="1000" resultsPerPage="20" linesPerPage="20"/>
+	
+</managedpay>

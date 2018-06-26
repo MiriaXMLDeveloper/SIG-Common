@@ -1,0 +1,6 @@
+Vendor|Transaction Date|RefNumber|Bill Due|Terms|Memo|Address Line1|Address Line2|Address Line3|Address Line4|Address City|Address State|Address PostalCode|Address Country|Vendor Acct No|Expenses Account|Expenses Amount|Expenses Memo|Expenses Class|Expenses Customer|Expenses Billable|Items Item|Items Qty|Items Description|Items Cost|Items Class|Items Customer|Items Billable|AP Account
+<#list documentsList as document>
+<#list document.documentLines as docline>
+<#if document.vendor?exists>${document.vendor.name}</#if>|<#if document.date?exists>${document.date?string["MM/dd/yyyy"]}</#if>|<#if document.number?exists>${document.number}</#if>|<#if document.dueDate?exists>${document.dueDate?string["MM/dd/yyyy"]}</#if>|<#if document.paymentTerm?exists>${document.paymentTerm.description}</#if>|<#if document.voucherComments?exists>${document.voucherComments}</#if>||||||||||<#if docline.accountCode?exists>${docline.accountCode}</#if>|<#if docline.lineTotal?exists>${docline.lineTotal}</#if>|<#if docline.tbdString3?exists>${docline.tbdString3}</#if>|||||||||||
+</#list>
+</#list>

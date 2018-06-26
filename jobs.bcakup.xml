@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<quartz version="1.1" xmlns="http://www.quartzscheduler.org/ns/quartz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.quartzscheduler.org/ns/quartz http://www.quartzscheduler.org/ns/quartz/job_scheduling_data_1_1.xsd">
+<job>
+		<job-detail>
+			<name>invoiceCreationJob</name>
+			<group>CabelasGroup</group>
+			<job-class>com.miriasystems.cabelas.etl.jobs.InvoiceCreationJob</job-class>
+			<volatility>false</volatility>
+			<durability>false</durability>
+			<recover>false</recover>
+			<job-data-map allows-transient-data="true"></job-data-map>
+		</job-detail>
+		<trigger>
+			<cron>
+				<name>invoiceCreationJob</name>
+				<group>CabelasGroup</group>
+				<job-name>allTrigger</job-name>
+				<job-group>allTriggers</job-group>
+				<cron-expression>0 0/4 * ? * *</cron-expression>
+			</cron>
+		</trigger>
+	</job>
+
+	<job>
+		<job-detail>
+			<name>paymentUpdateJob</name>
+			<group>CabelasGroup</group>
+			<job-class>com.miriasystems.cabelas.etl.jobs.PaymentUpdateJob</job-class>
+			<volatility>false</volatility>
+			<durability>false</durability>
+			<recover>false</recover>
+			<job-data-map allows-transient-data="true"></job-data-map>
+		</job-detail>
+		<trigger>
+			<cron>
+				<name>paymentUpdateJob</name>
+				<group>CabelasGroup</group>
+				<job-name>allTrigger</job-name>
+				<job-group>allTriggers</job-group>
+				<cron-expression>0 0/1 * ? * *</cron-expression>
+			</cron>
+		</trigger>
+	</job>
+</quartz>
